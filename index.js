@@ -159,7 +159,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello Mountain bike server')
+    res.send('Hello bd-turism')
 })
 
 app.listen(port, () => {
