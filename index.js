@@ -13,7 +13,7 @@ app.use(express.json());
 // const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.10dvn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 // const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-const uri = `mongodb+srv://${process.env.DB_USER}::${process.env.DB_PASS}@cluster0.10dvn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.10dvn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
@@ -23,7 +23,6 @@ async function run() {
         const database = client.db('bdTurism');
         const productsCollection = database.collection('products');
         const userCollection = database.collection('users')
-        const userCollectionRatting = database.collection('ratting')
         const orderCollection = database.collection('orders')
 
         // GET API
